@@ -9,13 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 
- <?php   
-/*Configuración del campo: fecha de creación, tiene que ser creado aquí porque si no, 
-no reconoce la variable $fecha_actual. Problema: No se pone la hora de registro sino de cuando se abre el formulario*/
-
-        date_default_timezone_set('America/Bogota');
-            $fecha_actual=date("Y-m-d H:i:s");  
-?>
+ 
 
 </head>
 
@@ -109,10 +103,7 @@ no reconoce la variable $fecha_actual. Problema: No se pone la hora de registro 
                                     <label for="direccion">Dirección</label>
                                     <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" require>
                                 </div>
-                                <div class="form-group">
-                                    <label for="create_at">Fecha de creación</label>
-                                    <input type="datetime" class="form-control" name="create_at" id="create_at" value="<?=$fecha_actual?>"  require>
-                                </div>
+                                
                             </div>                          
                        
                     </div>

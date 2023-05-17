@@ -55,14 +55,13 @@
                                 <div class="form-group">
                                     <label for="contrasena">Contraseña</label>
                                     <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Contraseña" require>
-                                </div>
-                                
-                                
-
-
-                                    
-                                    
-                                </div>
+                                </div>                             
+              
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="card-footer text-center">
+                        <button type="submit" class="btn btn-success">Ingresar</button>
                     </div>
                 </form> 
             </div>
