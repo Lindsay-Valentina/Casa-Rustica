@@ -45,7 +45,13 @@
                     <div class="card-body"> 
                         <div class="row">
                             <div class="col-sm-12">
-                                
+
+<!--codigo php que incluye los controladores-->
+                               <?php
+                                include("controladores/conexion.php");
+                                include("controladores/login.php");
+                                ?>
+
                                 <hr>
                                 <div class="form-group">
                                     <label for="email">Correo electrónico</label>
@@ -61,7 +67,7 @@
                     </div>
                     <hr>
                     <div class="card-footer text-center">
-                        <button type="submit" class="btn btn-success">Ingresar</button>
+                        <button type="submit" class="btn btn-success" name="btningresar">Ingresar</button>
                     </div>
                 </form> 
             </div>
