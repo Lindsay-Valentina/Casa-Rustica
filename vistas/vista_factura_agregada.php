@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modulo contable</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-
- 
-
+    <title>Factura agregada</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../estilos/estilos.css" type="text/css">
 </head>
 
 <body>
-    <section class="content">
+<section class="content">
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
@@ -29,18 +26,24 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="vista_home_contable.php">Módulo contable</a>
+                                    <a class="nav-link" href="vista_home_contable.php">Módulo contable</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="vista_home_stock.php">Módulo de stock</a>
-                                </li>                                        
+                                    <a class="nav-link" href="vista_home_stock.php">Módulo stock</a>
+                                </li> 
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="vista_home_proveedores.php">Agenda Proveedores</a>
+                                </li>   
+                                     
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Perfil</a>
                                 </li>  
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="vista_login.php">Cerrar sesión</a>
-                                </li>                     
+                                </li>  
+                                                  
                             </ul>
                         </div>
                     </div>
@@ -59,80 +62,26 @@
 <section class="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="card bg-info text-center text-white">
-                        <h4>LISTA DE PROVEEDORES</h4>
-                    </div>
-                    <hr>
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card bg-info text-center text-white">
+                  <h4>La factura se ha agregado exitosamente</h4>
                 </div>
-        </div>
-    </div>
-</section>
+                <form action="controladores/login.php" method="post">
+                    <div class="card-body"> 
+                        <div class="row">
+                            <div class="col-sm-12">
+</section>                            
 
-<section class="content">
-    <div class="container">
-        <div class="row">
-        <div class="col-md-1"></div>
-        
-        <div class="col-md-10">
-        <hr>
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido </th>
-      <th scope="col">NIT</th>
-      <th scope="col">Ciudad</th>
-      <th scope="col">Celular unidad</th>
-      <th scope="col">Correo electrónico</th>
-      <th scope="col">Material</th>
-      
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">2021</th>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      
 
-    </tr>
-    <tr>
-      <th scope="row">2022</th>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      
 
-    </tr>
-    <tr>
-    <td>2023</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      <td>xxx</td>
-      
-    </tr>
-  </tbody>
-</table>
-<div class="col-md-1"></div>
-        </div><
-</div>
-    </div>
-</section>
+         
 
-<script src="js/bootstrap.min.js"></script>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 .align-right{
     text-align: right !important;
+    margin: 20px
 }
 
 .title-page{
@@ -7,7 +8,31 @@
     margin-bottom: 20px;
 }
 
-.btn-add{
+.btn-add-go{
     color:white !important;
+}
 
+.row-btns{
+    margin: 50px 50px 50px 50px !important;
+    text-align: right !important;
+}
+
+.btn-login{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center;
+    
+}
+
+.form-login{
+    padding:20px 250px 5px 250px; 
+}
+
+.form-group-login{
+    margin-top: 10px;
+}
+
+.search{
+    margin:20px 450px 5px 10px;    
+    
 }

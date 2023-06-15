@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar factura</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../estilos/estilos.css" type="text/css">
 
 
 
@@ -15,7 +15,6 @@
 
 <body>
     <div class="row">
-
         <div class="col-md-12">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
@@ -45,16 +44,12 @@
                                 <a class="nav-link active" aria-current="page" href="vista_login.php">Cerrar
                                     sesión</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </nav>
-
         </div>
     </div>
-
-
 
     <div class="container">
         <div class="row">
@@ -62,16 +57,16 @@
                 <div class="card bg-info text-center text-white">
                     <h4>Agregar factura</h4>
                 </div>
-
             </div>
-
         </div>
+
         <div class="row">
             <div class="col-md-12 ">
                 <!-- codigo boton html -->
+
                 <div class="align-right">
                     <button type="button" class="btn btn-info btn-add" name="btningresar" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
+                        data-bs-target="#modal_producto_factura">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-bookmark-plus" viewBox="0 0 16 16">
                             <path
@@ -84,11 +79,9 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-
             <div class="col-12">
-                <hr>
-
                 <div class="form-group">
                     <label for="email">Método de pago</label>
                     <input type="text" class="form-control" name="concepto" id="concepto" placeholder="" require>
@@ -107,19 +100,18 @@
                     <input type="fecha" class="form-control" name="fecha" id="contrasena"
                         placeholder="Fecha en la que se causó la venta" require>
                 </div>
-
             </div>
         </div>
-        <hr>
-        <div class="card-footer text-center">
-            <button type="submit" class="btn btn-success" name="btningresar">Ingresar</button>
-        </div>
 
+        <div class="btn-login">
+            <button type="submit" class="btn btn-success" name="btningresar" value="btningresar">Agregar</button>
+        </div>
     </div>
 
-    <?php include("modal_factura.php");?>
+    <?php include '../modales/modal_producto_factura.php';?>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
