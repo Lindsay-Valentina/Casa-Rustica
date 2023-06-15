@@ -93,31 +93,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">2021</th>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">2022</th>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
+                        x</td>
                         </tr>
                     </tbody>
                 </table>

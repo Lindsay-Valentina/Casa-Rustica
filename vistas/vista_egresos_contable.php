@@ -55,12 +55,12 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- codigo botones html -->
         <div class="row row-btns">
             <div class="col-md-6 btn-add-go">
                 <button type="button" class="btn btn-info btn-add" name="btningresar" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
+                    data-bs-target="#modal_egreso">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-bookmark-plus" viewBox="0 0 16 16">
                         <path
@@ -94,45 +94,28 @@
                     <thead>
                         <tr>
                             <th scope="col">Concepto</th>
+                            <th scope="col">Fecha</th>
                             <th scope="col">Valor</th>
-                            <th scope="col">Fecha egreso</th>
                             <th scope="col">Soporte</th>
-                            <th scope="col">Fecha de creación</th>
+                            <th scope="col">Fecha de registro</th>
+                            <th scope="col">Fecha de actualización</th>
                             <th scope="col">Acción</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">2021</th>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">2022</th>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                        </tr>
+                    <?php
+                    include '../controladores/EgresoControlador.php';
+                    ?>
+
+                    <tbody>
                     </tbody>
+
                 </table>
             </div>
+        </div>
 
+        <?php include '../modales/modal_egreso.php';?>
 
-            <?php include("../modales/modal_egreso.php");?>
-            <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

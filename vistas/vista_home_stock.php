@@ -34,7 +34,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="vista_login.php">Perfil</a>
+                                    <a class="nav-link active" aria-current="page" href="vista_perfil.php">Perfil</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="vista_login.php">Cerrar

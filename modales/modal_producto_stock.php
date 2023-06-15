@@ -7,8 +7,8 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="modal_producto_stock">Agregar producto</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
             </div>
+            
             <div class="modal-body">
                 <!-- Código del formulario para agregar un producto al stock -->
                 <form id="agregarProductoForm" method="POST" action="../controladores/ProductoControlador.php" enctype="multipart/form-data">
@@ -32,14 +32,14 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="valor_unidad">Valor unidad</label> 
-                        <input type="number" step="any" class="form-control" name="valor_unidad" id="valor_unidad" placeholder=""
-                            required>
+                        <label for="valor_unidad">Valor unidad</label>
+                        <input type="number" step="any" class="form-control" name="valor_unidad" id="valor_unidad"
+                            placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="valor_total_productos">Valor total productos</label>
-                        <input type="number" step="any" class="form-control" name="valor_total_productos" id="valor_total_productos"
-                            placeholder="" required>
+                        <input type="number" step="any" class="form-control" name="valor_total_productos"
+                            id="valor_total_productos" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="link_imagen">Imagen</label>

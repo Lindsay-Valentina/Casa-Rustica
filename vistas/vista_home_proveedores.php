@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modulo contable</title>
+    <title>Agenda proveedores</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css" type="text/css">
 </head>
@@ -32,7 +32,7 @@
                                     <a class="nav-link" href="vista_home_stock.php">Módulo de stock</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Perfil</a>
+                                    <a class="nav-link active" aria-current="page" href="vista_perfil.php">Perfil</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="vista_login.php">Cerrar
@@ -91,53 +91,25 @@
                             <th scope="col">Apellido </th>
                             <th scope="col">NIT</th>
                             <th scope="col">Ciudad</th>
-                            <th scope="col">Celular unidad</th>
+                            <th scope="col">Celular</th>
                             <th scope="col">Correo electrónico</th>
                             <th scope="col">Material</th>
                         </tr>
                     </thead>
+                    <?php
+                    include '../controladores/ProveedorControlador.php';
+                    ?>
 
                     <tbody>
-                        <tr>
-                            <th scope="row">2021</th>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-
-
-                        </tr>
-                        <tr>
-                            <th scope="row">2022</th>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-
-
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-                            <td>xxx</td>
-
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
         </div>
 
+        <?php include '../modales/modal_proveedor.php';?>
 
         <script src="../js/bootstrap.min.js"></script>
-        <?php include '../modales/modal_proveedor.php';?>
 
 </body>
 
