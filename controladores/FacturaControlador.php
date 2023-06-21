@@ -10,15 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Obtener los datos del formulario
   $metodo_pago = $_POST['metodo_pago'];
   $estado_pago = $_POST['estado_pago'];
+  $total_factura = $_POST['total_factura'];
   $fecha_venta = $_POST['fecha_venta'];
   $fecha_registro = $_POST['fecha_registro'];
    
 
   // Crear una instancia de Factura y establecer los valores
   $factura = new Factura();
-  $factura->setMetodo_pago($concepto);
-  $factura->setEstado_pago($fecha);
-  $factura->setFecha_venta($valor);
+  $factura->setMetodo_pago($metodo_pago);
+  $factura->setEstado_pago($estado_pago);
+  $factura->setTotal_factura($total_factura);
+  $factura->setFecha_venta($fecha_venta);
   $factura->setFecha_registro($fecha_registro);
 
 
@@ -43,11 +45,11 @@ $facturas = FacturaDao::listarFacturas();
 while ($factura = $facturas->fetch(PDO::FETCH_ASSOC)) {
     echo "<tr>";
     echo "<td>" . $factura['id_factura'] . "</td>";
-    echo "<td>" . $factura['fecha'] . "</td>";
-    echo "<td>" . $factura['valor'] . "</td>";
-    echo "<td>" . $factura['soporte'] . "</td>";
+    echo "<td>" . $factura['metodo_pago'] . "</td>";
+    echo "<td>" . $factura['estado_pago'] . "</td>";
+    echo "<td>" . $factura['total_factura'] . "</td>";
+    echo "<td>" . $factura['fecha_venta'] . "</td>";
     echo "<td>" . $factura['fecha_registro'] . "</td>";
-    echo "<td>" . $factura['fecha_actualizacion'] . "</td>";
     echo "</tr>";
 }
 

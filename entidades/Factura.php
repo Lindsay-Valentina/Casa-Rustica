@@ -7,6 +7,7 @@ class Factura
     private $id_tienda;
     private $metodo_pago;
     private $estado_pago;
+	private $total_factura;
     private $fecha_venta;
     private $fecha_registro;
 
@@ -48,6 +49,14 @@ class Factura
 
 	public function setEstado_pago($estado_pago){
 		$this->estado_pago = $estado_pago;
+	}
+
+	public function getTotal_factura(){
+		return $this->total_factura;
+	}
+
+	public function setTotal_factura($total_factura){
+		$this->total_factura = $total_factura;
 	}
 
 	public function getFecha_venta(){

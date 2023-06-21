@@ -1,0 +1,141 @@
+
+body {
+    height: 100%;
+    font-family: 'Arial Narrow', Arial, sans-serif, sans-serif;
+    margin: 10px 30px;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* Utilizamos 100vh para ocupar el 100% de la altura de la pantalla */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Aseguramos que el padding esté incluido en el tamaño total */
+    background-color: #f3e6e2;
+}
+
+.row {
+    margin-top: 15px; /* Ajusta el margen superior */
+    
+  }
+
+/* Barra de navegación */
+
+.navbar {
+    background-color:  #734E38;
+    padding: 10px 30px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #f3e6e2;
+}
+
+.navbar-links {
+    display: flex;   
+    
+ 
+  }
+  
+.navbar-logo {
+    margin-left: auto;
+    
+}
+
+.navbar-logo img {
+  width: 230px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+  
+.navbar-login {
+    margin-left: auto;
+  }
+
+.navbar-brand {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+
+
+.title_login {
+    background-color:  #734e3857;
+    margin-bottom: 7px;
+    color: #594539;
+    padding: 10px 30px ;    
+    text-align: center;
+    justify-content: space-between;
+    margin: 85px 350px;
+    box-shadow: 2px 2px 2px 2px hsla(15, 30%, 64%, 0.306);
+}
+
+.caja_login {
+    background-color:  #734e383b;
+    margin-bottom: 7px;
+    color:#FFF;
+    padding: 10px 30px ;    
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.caja_contra {
+    background-color:  #734e383b;
+    margin-bottom: 7px;
+    color: #FFF;
+    padding: 10px 30px ;    
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+
+.btn-login{
+    
+    color: #FFF;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+/* Pie de página */
+
+.footer {
+    background-color: #734E38;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+
+.bg-dark {
+    background-color: #734E38;
+}
+
+.bg-info {
+    background-color: #594539;
+}
+
+.text-white {
+    color: #FFF;
+}

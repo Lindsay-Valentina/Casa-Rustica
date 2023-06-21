@@ -44,3 +44,7 @@
     margin:20px 450px 5px 10px;    
     
 }
+
+.bg-custom{
+    background-color: aqua !important;
+}

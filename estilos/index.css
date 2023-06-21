@@ -1,0 +1,159 @@
+/* Estilos generales "Roboto, sans-serif": Roboto es una fuente moderna y ampliamente utilizada que ofrece una apariencia limpia y legible. Es muy versátil y se adapta bien a diferentes diseños.
+
+"Open Sans, sans-serif": Open Sans es otra fuente sans-serif popular que se destaca por su legibilidad en pantallas y su diseño limpio. Es ampliamente utilizada en aplicaciones web y móviles.
+
+"Montserrat, sans-serif": Montserrat es una fuente moderna y elegante que presenta trazos geométricos y una amplia variedad de pesos. Es ideal para diseños minimalistas y contemporáneos.
+
+"Lato, sans-serif": Lato es una fuente sans-serif que ofrece un equilibrio entre elegancia y legibilidad. Tiene una amplia gama de pesos y estilos, lo que la hace adecuada para diversos proyectos.
+
+"Poppins, sans-serif": Poppins es una fuente moderna y versátil que se caracteriza por sus formas redondeadas y amigables. Es adecuada para diseños modernos y juveniles.
+
+"Nunito, sans-serif": Nunito es una fuente sans-serif con una apariencia contemporánea y una excelente legibilidad. Tiene una variedad de pesos y es popular tanto para diseños de impresión como digitales. */
+
+body {
+    height: 100%;
+    font-family: 'Arial Narrow', Arial, sans-serif, sans-serif;
+    margin: 10px 30px;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* Utilizamos 100vh para ocupar el 100% de la altura de la pantalla */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Aseguramos que el padding esté incluido en el tamaño total */
+    background-color: #f3e6e2;
+}
+
+.row {
+    margin-top: 15px; /* Ajusta el margen superior */
+    
+  }
+
+/* Barra de navegación */
+
+.navbar {
+    background-color:  #734E38;
+    padding: 10px 30px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #f3e6e2;
+}
+
+.navbar-links {
+    display: flex;   
+    
+ 
+  }
+  
+.navbar-logo {
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.navbar-logo img {
+  width: 230px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+  
+.navbar-login {
+    margin-left: auto;
+  }
+
+.navbar-brand {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagen_banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../multimedia/habitacion_banner.jpg"); /* Reemplaza "ruta_de_la_imagen.jpg" con la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.imagen_banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* content */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagen_content {
+    width: 50%;
+    float: left;
+    margin: 5px 10px;
+    background-size: cover;
+}
+
+.imagen_content img {
+    width: 100%;
+    height: auto;
+    display: block;
+   
+    object-fit: contain;
+}
+
+.descripcion_imagen {
+    width: 46%;
+    float: left;
+    margin: 5px 10px;
+
+}
+
+/* Pie de página */
+
+.footer {
+    background-color: #734E38;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+
+.bg-dark {
+    background-color: #734E38;
+}
+
+.bg-info {
+    background-color: #594539;
+}
+
+.text-white {
+    color: #FFF;
+}

@@ -50,7 +50,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 title-page">
-                <div class="card bg-info text-center text-white">
+                <div class="card bg-info text-center text-white ">
                     <h4>EGRESOS</h4>
                 </div>
             </div>

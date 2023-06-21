@@ -88,12 +88,12 @@
                             <th scope="col">Estado de pago</th>
                             <th scope="col">Total factura</th>
                             <th scope="col">Fecha de venta</th>
-                            <th scope="col">Fecha de creación</th>
+                            <th scope="col">Fecha de registro</th>
                             <th scope="col">Acción</th>
                         </tr>
                     </thead>
                     <tbody>
-                        x</td>
+                        </td>
                         </tr>
                     </tbody>
                 </table>
