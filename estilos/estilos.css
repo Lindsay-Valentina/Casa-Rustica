@@ -1,11 +1,19 @@
 html,
 body {
-  margin: 0px;
-  height: 100%;
+    margin: 0px;
+    height: 100%;
 }
 
 .container-fluid {
     background-color: #f3e6e2;
+}
+
+.bienvenida {
+    text-align: right;
+    color: #fff;
+    font-size: large;
+    margin: 5px;
+
 }
 
 
@@ -65,64 +73,76 @@ body {
     text-decoration: underline;
 }
 
-.align-right{
+.align-right {
     text-align: right !important;
-    margin: 20px;
+}
+
+.align-left-m10 {
+    text-align: left !important;
+    margin: 10px;
 }
 
 
-.align-center{
+.align-center {
     text-align: center !important;
 }
 
 .vertical-center {
     display: flex;
     align-items: center;
- }
- .horizontal-center {
+}
+
+.horizontal-center {
     display: flex;
     justify-content: center;
- }
-.title-page{
+}
+
+.title-page {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.btn-add-go{
-    color:white !important;
+.btn-add-go {
+    color: white !important;
+    margin-bottom: 30px;
 }
 
-.row-btns{
+.btn-add {
+    color: white !important;
+    background-color: #138b80 !important;
+}
+
+.row-btns {
     margin: 50px 50px 50px 50px !important;
     text-align: right !important;
 }
 
-.btn-login{
+.btn-login {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
-    
+
 }
 
 .profile-image {
     width: 150px !important;
     height: 150px !important;
     background-color: #ccc !important;
-    border-radius: 50% !important; 
+    border-radius: 50% !important;
     margin-bottom: 20px !important;
-  }
+}
 
 
 
-.form-group-login{
+.form-group-login {
     margin-top: 10px;
 }
 
-.search{
-    margin:20px 450px 5px 10px;    
-    
+.search {
+    margin: 20px 450px 5px 10px;
+
 }
 
-.bg-custom{
+.bg-custom {
     background-color: aqua !important;
 }
 
@@ -135,7 +155,9 @@ body {
     text-align: center;
 }
 
-
+.table{
+    margin-bottom: 30px !important;
+}
 
 .bg-dark {
     background-color: #734E38;
@@ -147,4 +169,34 @@ body {
 
 .text-white {
     color: #FFF;
+}
+
+.label-group {
+    text-align: left !important;
+    margin: 10px 0px !important;
+}
+
+.title-modules {
+    background-color: #734e3837 !important;
+    text-align: center;
+    color: black;
+
+}
+
+.thead-brown {
+    background-color: #be9788;
+}
+
+.table-striped>tbody>tr:nth-child(2n+1)>td,
+.table-striped>tbody>tr:nth-child(2n+1)>th {
+    background-color: #f2f2f2;
+}
+
+.table-striped>tbody>tr:nth-child(2n+2)>td,
+.table-striped>tbody>tr:nth-child(2n+2)>th {
+    background-color: white;
+}
+
+.table-striped>tbody>tr{
+    border-bottom:1px solid rgb(0, 0, 0);
 }

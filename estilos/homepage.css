@@ -1,12 +1,5 @@
 
 
-.bienvenida {
-    text-align: right;
-    color: #fff;
-    font-size: large;
-    margin: 5px;
-
-}
 
 
 .title-modulos {
@@ -19,33 +12,13 @@
 
 }
 
-.contable {
+.module {
     margin: 15px;
-    background-color: #734e3837;
+    background-color: #734e3837 !important;
     padding: 10px;
     box-shadow: 2px 2px 2px 2px hsla(14, 30%, 64%, 0.167);
     text-align: center;
 }
-
-.stock {
-    margin: 15px;
-    background-color: #734e3837;
-    padding: 10px;
-    box-shadow: 2px 2px 2px 2px hsla(14, 30%, 64%, 0.167);
-    text-align: center
-}
-
-.proveedores {
-    margin: 15px;
-    background-color: #734e3837;
-    padding: 10px;
-    box-shadow: 2px 2px 2px 2px hsla(14, 30%, 64%, 0.167);
-    text-align: center
-}
-
-
-
-
 
 
 .text-align-center {

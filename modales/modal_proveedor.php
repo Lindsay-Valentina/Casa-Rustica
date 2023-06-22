@@ -13,37 +13,37 @@
                     <form id="agregarProveedorForm" method="POST" action="../controladores/ProveedorControlador.php"
                         enctype="multipart/form-data">
 
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
+                        <div class="form-group align-left-m10 ">
+                            <label  for="nombre">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" require>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group align-left-m10">
                             <label for="apellido">Apellido</label>
                             <input type="text" class="form-control" name="apellido" id="apellido" placeholder="" require>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group align-left-m10">
                             <label for="nit">NIT</label>
                             <input type="text" class="form-control" name="nit" id="nit" placeholder="" require>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group align-left-m10">
                             <label for="ciudad">Ciudad</label>
                             <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="" require>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group align-left-m10">
                             <label for="celular">Celular</label>
                             <input type="text" class="form-control" name="celular" id="celular" placeholder="" require>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group align-left-m10">
                             <label for="email">Email</label>
                             <input type="text" class="form-control" name="email" id="email" placeholder="" require>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group align-left-m10">
                             <label for="material">Material</label>
                             <input type="text" class="form-control" name="material" id="material" placeholder="" require>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary" name="agregar_producto">Agregar proveedor</button>
+                            <button type="submit" class="btn  btn-add" name="agregar_producto">Agregar</button>
                         </div>
                     </form>
                 </div>

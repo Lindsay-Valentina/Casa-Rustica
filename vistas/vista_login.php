@@ -72,7 +72,7 @@
                             </div>
 
                             <div class="btn-login">
-                                <button type="submit" class="btn  btn-success" name="btningresar" value="btningresar">Ingresar</button>
+                                <button type="submit" class="btn btn-add" name="btningresar" value="btningresar">Ingresar</button>
                             </div>
                         </form>
                     </div>
