@@ -8,6 +8,7 @@
     <title>homepage.php</title>
     <link rel="stylesheet" href="../estilos/homepage.css" type="text/css">
 
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 
 
@@ -58,9 +59,16 @@
             </div>
             <div class="col-md-4">
                 <div class="stock">
-                    <h3>Módulo de stock</h3>
-                    <a href="vista_home_stock.php">Ir al módulo de stock</a>
+                    <div style="height:120px;">
+                        <img style= "height:100%" src="../multimedia/muebles.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Módulo de stock</h3>
+                        <a href="vista_home_stock.php">Ir al módulo de stock</a>
+                    </div>
+                   
                 </div>
+               
             </div>
             <div class="col-md-4">
                 <div class="proveedores">
