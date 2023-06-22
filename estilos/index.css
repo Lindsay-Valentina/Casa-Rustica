@@ -10,78 +10,6 @@
 
 "Nunito, sans-serif": Nunito es una fuente sans-serif con una apariencia contemporánea y una excelente legibilidad. Tiene una variedad de pesos y es popular tanto para diseños de impresión como digitales. */
 
-body {
-    height: 100%;
-    font-family: 'Arial Narrow', Arial, sans-serif, sans-serif;
-    margin: 10px 30px;
-    padding: 0;
-}
-
-.container {
-    width: 100%;
-    height: 100vh; /* Utilizamos 100vh para ocupar el 100% de la altura de la pantalla */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box; /* Aseguramos que el padding esté incluido en el tamaño total */
-    background-color: #f3e6e2;
-}
-
-.row {
-    margin-top: 15px; /* Ajusta el margen superior */
-    
-  }
-
-/* Barra de navegación */
-
-.navbar {
-    background-color:  #734E38;
-    padding: 10px 30px ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-link {
-    margin-left: 10px;
-    text-decoration: none;
-    color: #f3e6e2;
-}
-
-.navbar-links {
-    display: flex;   
-    
- 
-  }
-  
-.navbar-logo {
-    margin-right: auto;
-    margin-left: auto;
-    
-}
-
-.navbar-logo img {
-  width: 230px; /* Ajusta el ancho del logo */
-  height: auto; /* Mantiene la proporción de aspecto */
-}
-  
-.navbar-login {
-    margin-left: auto;
-  }
-
-.navbar-brand {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.navbar-brand:hover {
-    text-decoration: underline;
-}
-
-.navbar-link:hover {
-    text-decoration: underline;
-}
 
 .banner {
     position: relative;
@@ -115,9 +43,8 @@ body {
 }
 
 .imagen_content {
-    width: 50%;
     float: left;
-    margin: 5px 10px;
+    margin: 10px 0px;
     background-size: cover;
 }
 
@@ -130,30 +57,9 @@ body {
 }
 
 .descripcion_imagen {
-    width: 46%;
     float: left;
     margin: 5px 10px;
 
 }
 
-/* Pie de página */
 
-.footer {
-    background-color: #734E38;
-    padding: 10px;
-    color: #FFF;
-    text-align: center;
-}
-
-
-.bg-dark {
-    background-color: #734E38;
-}
-
-.bg-info {
-    background-color: #594539;
-}
-
-.text-white {
-    color: #FFF;
-}

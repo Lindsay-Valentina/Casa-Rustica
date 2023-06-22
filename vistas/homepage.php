@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage.php</title>
     <link rel="stylesheet" href="../estilos/homepage.css" type="text/css">
+    <link rel="stylesheet" href="../estilos/estilos.css" type="text/css">
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
@@ -20,26 +21,35 @@
     ?>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="navbar">
-                    <div class="navbar-links">
-                        <a class="navbar-link" href="index.php">Inicio</a>
-                        <a class="navbar-link" href="acerca.php">Acerca de nosotros</a>
-                        <a class="navbar-link" href="catalogo.php">Catálogo</a>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="navbar-header">
+                <div class="col-md-5 ">
+                    <div>
+                        <a class="navbar-option" href="index.php">Inicio</a>
+                        <a class="navbar-option" href="acerca.php">Acerca de nosotros</a>
+                        <a class="navbar-option" href="catalogo.php">Catálogo</a>
                     </div>
 
-                    <div class="bienvenida">
-                        <h4><span class="user-icon"></span> Bienvenida
-                            <?php echo $_SESSION["administrador"]["nombre"];?></h3>
-                    </div>
-
-                    <div class="navbar-logo">
+                </div>
+                <div class="col-md-5">
+                    <div class="navbar-logo" style="text-align: left;">
                         <img src="../multimedia/logo.png" alt="Logo">
                     </div>
                 </div>
+                <div class="col-md-2">
+                    <div class="bienvenida">
+                        <h5>  Bienvenida
+                            <?php echo $_SESSION["administrador"]["nombre"]; ?>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+  <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+</svg>
+                            </h5>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <div class="row">
@@ -60,15 +70,15 @@
             <div class="col-md-4">
                 <div class="stock">
                     <div style="height:120px;">
-                        <img style= "height:100%" src="../multimedia/muebles.png" alt="">
+                        <img style="height:100%" src="../multimedia/muebles.png" alt="">
                     </div>
                     <div>
                         <h3>Módulo de stock</h3>
                         <a href="vista_home_stock.php">Ir al módulo de stock</a>
                     </div>
-                   
+
                 </div>
-               
+
             </div>
             <div class="col-md-4">
                 <div class="proveedores">
@@ -76,20 +86,20 @@
                     <a href="vista_home_proveedores.php">Ir a la agenda de proveedores</a>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer">
+                    <p>Casa rústica</p>
+                    <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
+                    <p>Celular: 3123115150</p>
+                    <p>Copyright 2023 por Valentina</p>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="footer">
-                        <p>Casa rústica</p>
-                        <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                        <p>Celular: 3123115150</p>
-                        <p>Copyright 2023 por Valentina</p>
-
-                    </div>
                 </div>
             </div>
+        </div>
 
-
+    </div>
 
 
 </body>

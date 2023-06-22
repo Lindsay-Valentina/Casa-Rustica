@@ -1,8 +1,88 @@
-.align-right{
-    text-align: right !important;
-    margin: 20px
+html,
+body {
+  margin: 0px;
+  height: 100%;
 }
 
+.container-fluid {
+    background-color: #f3e6e2;
+}
+
+
+/* Barra de navegación */
+
+.navbar-option:hover {
+    color: #f5af3e !important;
+}
+
+.navbar-header {
+    background-color: #734E38;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-option {
+    margin-left: 10px;
+    text-decoration: none !important;
+    color: #f3e6e2;
+    font-size: large;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-logo {
+    text-align: right;
+}
+
+.navbar-logo img {
+    width: 230px;
+    /* Ajusta el ancho del logo */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
+}
+
+.navbar-login {
+    margin-left: auto;
+    text-align: right;
+}
+
+.navbar-brand {
+    color: #f3e6e2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+.align-right{
+    text-align: right !important;
+    margin: 20px;
+}
+
+
+.align-center{
+    text-align: center !important;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+ }
+ .horizontal-center {
+    display: flex;
+    justify-content: center;
+ }
 .title-page{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -20,7 +100,6 @@
 .btn-login{
     margin-top: 20px !important;
     margin-bottom: 20px !important;
-    text-align: center;
     
 }
 
@@ -32,9 +111,7 @@
     margin-bottom: 20px !important;
   }
 
-.form-login{
-    padding:20px 250px 5px 250px; 
-}
+
 
 .form-group-login{
     margin-top: 10px;
@@ -47,4 +124,27 @@
 
 .bg-custom{
     background-color: aqua !important;
+}
+
+/* Pie de página */
+
+.footer {
+    background-color: #734E38;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+
+
+.bg-dark {
+    background-color: #734E38;
+}
+
+.bg-info {
+    background-color: #594539;
+}
+
+.text-white {
+    color: #FFF;
 }
