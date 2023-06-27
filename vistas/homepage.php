@@ -27,8 +27,8 @@
                 <div class="col-md-5 ">
                     <div>
                         <a class="navbar-option" href="index.php">Inicio</a>
-                        <a class="navbar-option" href="acerca.php">Acerca de nosotros</a>
-                        <a class="navbar-option" href="catalogo.php">Catálogo</a>
+                        <a class="navbar-option" href="vista_perfil.php">Perfil</a>
+                        <a class="navbar-option" href="vista_login.php">Cerrar sesión</a>
                     </div>
 
                 </div>
@@ -63,12 +63,19 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4">
+        <div class="col-md-4">
                 <div class="module">
-                    <h3>Módulo contable</h3>
-                    <a href="vista_home_contable.php">Ir al módulo contable</a>
+                    <div style="height:120px;">
+                        <img style="height:100%" src="../multimedia/contable.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Módulo contable</h3>
+                        <a href="vista_home_contable.php">Ir al módulo contable</a>
+                    </div>
                 </div>
             </div>
+
+
             <div class="col-md-4">
                 <div class="module">
                     <div style="height:120px;">
@@ -78,17 +85,20 @@
                         <h3>Módulo de stock</h3>
                         <a href="vista_home_stock.php">Ir al módulo de stock</a>
                     </div>
-
                 </div>
-
             </div>
+            
             <div class="col-md-4">
                 <div class="module">
-                    <h3>Agenda de proveedores</h3>
-                    <a href="vista_home_proveedores.php">Ir a la agenda de proveedores</a>
+                    <div style="height:120px;">
+                        <img style="height:100%" src="../multimedia/cuaderno.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Agenda de proveedores</h3>
+                        <a href="vista_home_proveedores.php">Ir a proveedores</a>
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="footer">

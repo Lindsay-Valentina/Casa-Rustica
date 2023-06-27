@@ -11,81 +11,94 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    ?>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.php">Casa Rústica</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="vista_home_contable.php">Módulo
-                                        contable</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="vista_home_stock.php">Módulo
-                                        de stock</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="vista_home_proveedores.php">Agenda proveedores</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="vista_login.php">Cerrar
-                                        sesión</a>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="navbar-header">
+                <div class="col-md-5 ">
+                    <div>
+                        <a class="navbar-option" href="homepage.php">Inicio</a>
+                        <a class="navbar-option" href="vista_home_contable.php">Módulo contable</a>
+                        <a class="navbar-option" href="vista_home_stock.php">Módulo de stock</a>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card bg-info text-center text-white" style="margin-top: 10px;">
-                    <h4>Bienvenida</h4>
+                </div>
+                <div class="col-md-5">
+                    <div class="navbar-logo" style="text-align: left;">
+                        <img src="../multimedia/logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="bienvenida">
+                        <h5> Bienvenida
+                            <?php echo $_SESSION["administrador"]["nombre"]; ?>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                                <path
+                                    d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            </svg>
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        
-        <div class="card-body">
-            <div class="text-center">
-              <div class="profile-image"></div>
-              <h4>Valentina</h4>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert  title-modules">
+                        <h4>Perfil del administrador</h4>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" value="" readonly>
+
+            <div class="card mb-3 title-modules" style="width: 35rem;">
+                <div class="card-body ">
+                    <img src="../multimedia/valen.jpeg" class=" profile-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Valentina Guaba Marulanda</h5>
+                        <p class="card-text">Estudiante de Análisis y Desarrollo de Sistemas de Información.
+                        </p>
+                    </div>
+                    <ul class="list-group thead-brown">
+                        <li class="list-group-item">Correo electrónico: lindsay-valentina@hotmail.com</li>
+                        <li class="list-group-item">Edad: 26 años</li>
+                        <li class="list-group-item">Dirección: Carrera 2B este, Tunja, Boyacá.</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://www.linkedin.com/in/lindsay-valentina-guaba-marulanda-aba439196/"
+                            class="btn  btn-add">Linkedin</a>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-              <label for="celular" class="form-label">Celular:</label>
-              <input type="tel" class="form-control" id="celular" value="" readonly>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer">
+                        <p>Casa rústica</p>
+                        <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
+                        <p>Celular: 3123115150</p>
+                        <p>Copyright 2023 por Valentina</p>
+                    </div>
+                </div>
+
+
+
+
             </div>
-            <div class="mb-3">
-              <label for="ciudad" class="form-label">Ciudad:</label>
-              <input type="text" class="form-control" id="ciudad" value=" " readonly>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
-        
 
 
 
-        <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

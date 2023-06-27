@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   
   // Obtener los datos del formulario
+  $id_cliente = $_POST['id_cliente'];
   $metodo_pago = $_POST['metodo_pago'];
   $estado_pago = $_POST['estado_pago'];
   $total_factura = $_POST['total_factura'];
@@ -17,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Crear una instancia de Factura y establecer los valores
   $factura = new Factura();
+  $factura->setId_cliente($id_cliente);
   $factura->setMetodo_pago($metodo_pago);
   $factura->setEstado_pago($estado_pago);
   $factura->setTotal_factura($total_factura);

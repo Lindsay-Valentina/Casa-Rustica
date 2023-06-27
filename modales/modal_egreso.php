@@ -10,38 +10,39 @@
 
             <div class="modal-body">
                 <!-- codigo del formulario para agregar un egreso -->
-                <form id="agregarEgresoForm" method="POST" action="../controladores/EgresoControlador.php" enctype="multipart/form-data">
-                    <div class="form-group">
+                <form id="agregarEgresoForm" method="POST" action="../controladores/EgresoControlador.php"
+                    enctype="multipart/form-data">
+                    <div class="form-group align-left-m10 ">
                         <label for="concepto">Concepto</label>
                         <input type="text" class="form-control" name="concepto" id="concepto" placeholder="" require>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group align-left-m10 ">
                         <label for="valor">Valor</label>
                         <input type="text" class="form-control" name="valor" id="valor" placeholder="" require>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group align-left-m10 ">
                         <label for="fecha">fecha</label>
                         <input type="date" class="form-control" name="fecha" id="fecha" placeholder="" require>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group align-left-m10 ">
                         <label for="soporte">Soporte</label>
                         <input type="file" class="form-control" name="soporte" id="soporte" placeholder="" require>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group align-left-m10 ">
                         <label for="fecha_registro">Fecha de registro</label>
                         <input type="date" class="form-control" name="fecha_registro" id="fecha_registro" placeholder=""
                             required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group align-left-m10 ">
                         <label for="fecha_actualizacion">Fecha de actualización</label>
-                        <input type="date" class="form-control" name="fecha_actualizacion" id="fecha_actualizacion" placeholder=""
-                            required>
+                        <input type="date" class="form-control" name="fecha_actualizacion" id="fecha_actualizacion"
+                            placeholder="" required>
                     </div>
 
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" name="agregar_egreso">Agregar egreso</button>
+                        <button type="submit" class="btn  btn-add" name="agregar_egreso">Agregar egreso</button>
                     </div>
                 </form>
             </div>

@@ -51,7 +51,9 @@ while ($proveedor = $proveedores->fetch(PDO::FETCH_ASSOC)) {
     echo "<td>" . $proveedor['ciudad'] . "</td>";
     echo "<td>" . $proveedor['celular'] . "</td>";
     echo "<td>" . $proveedor['email'] . "</td>";
-    echo "<td>" . $proveedor['material'] . "</td>";    
+    echo "<td>" . $proveedor['material'] . "</td>";
+    echo "<td><a href='../vistas/vista_editar_proveedor.php?id=" . $proveedor['id_proveedor'] . "'>Editar</a></td>";
+    echo "<td><a href='eliminar_proveedor.php?id=" . $proveedor['id_proveedor'] . "'>Eliminar</a></td>";
     echo "</tr>";
 }
 

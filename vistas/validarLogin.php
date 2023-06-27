@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
    // Credenciales incorrectas, mostrar mensaje de error
-            $mensaje_error = "Credenciales incorrectas. Acceso denegado.";
+            $mensaje_error = "Correo o contraseña incorrectos";
             session_start();
             $_SESSION['resultado'] = $mensaje_error;
             header("Location: vista_login.php");
@@ -52,18 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             
             
 
-
-/*$mensaje_error = "Credenciales incorrectas. Acceso denegado.";?>
-<div style="color: red;"><?php echo $mensaje_error; ?></div>
-
-<?php
-
-
-//echo 'Acceso denegado';;
-//$resultado = array("estado" =>"false"); 
-//return print(json_encode($resultado));*/
-
- 
     
      
 

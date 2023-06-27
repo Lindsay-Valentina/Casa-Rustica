@@ -41,10 +41,12 @@ if (move_uploaded_file($_FILES['link_imagen']['tmp_name'], $directorio_destino))
     // Ocurrió un error al insertar el producto
     echo "Error al agregar el producto.";
   }
+
 } else{
   // Ocurrió un error al mover el archivo
   echo "Error al cargar la imagen.";
 }
+
 }
 
 // Obtener la lista de productos
@@ -59,7 +61,7 @@ while ($producto = $productos->fetch(PDO::FETCH_ASSOC)) {
     echo "<td>" . $producto['num_unidades'] . "</td>";
     echo "<td>" . $producto['valor_unidad'] . "</td>";
     echo "<td>" . $producto['valor_total_productos'] . "</td>";
-    echo "<td><img src='" . $producto['link_imagen'] . "' alt='Imagen' style='width: 50px;'></td>";
+    echo "<td><img src='data:image/jpeg;base64," . base64_encode($producto['link_imagen']) . "' alt='Imagen' style='width: 50px;'></td>";
 
     echo "<td>" . $producto['fecha_registro'] . "</td>";
     echo "</tr>";

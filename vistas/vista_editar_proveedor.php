@@ -23,7 +23,6 @@
                         <a class="navbar-option" href="vista_home_contable.php">Módulo contable</a>
                         <a class="navbar-option" href="vista_home_stock.php">Módulo de stock</a>
                     </div>
-
                 </div>
                 <div class="col-md-5">
                     <div class="navbar-logo" style="text-align: left;">
@@ -50,64 +49,55 @@
             <div class="row">
                 <div class="col-md-12 title-page">
                     <div class="alert  title-modules">
-                        <h4>LISTA DE PROVEEDORES</h4>
+                        <h4>EDITAR PROVEEDOR</h4>
                     </div>
                 </div>
             </div>
 
-            <div class="row align-right">
-                <div class="col-md-12 btn-add-go">
-                    <button type="button" class="btn btn-add" name="btningresar" data-bs-toggle="modal"
-                        data-bs-target="#modal_proveedor">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bookmark-plus" viewBox="0 0 16 16">
-                            <path
-                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
-                            <path
-                                d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
-                        </svg>
-                        Agregar proveedor
-                    </button>
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="POST" action="editar_proveedor.php?id=<?php echo $idProveedor; ?>">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-labe mb-1">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label mb-1">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nit" class="form-label mb-1">NIT:</label>
+                            <input type="text" class="form-control" id="nit" name="nit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ciudad" class="form-label mb-1">Ciudad:</label>
+                            <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="celular" class="form-label mb-1">Celular:</label>
+                            <input type="text" class="form-control" id="celular" name="celular" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label mb-1">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="material" class="form-label mb-1">Material:</label>
+                            <input type="text" class="form-control" id="material" name="material" required>
+                        </div>
+                        <button type="submit" class="btn  btn-add mb-3" name="actualizar_proveedor">Actualizar
+                                proveedor</button>
+                    </form>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table table-striped">
-                        <thead class="thead-brown">
-                            <tr>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido </th>
-                                <th scope="col">NIT</th>
-                                <th scope="col">Ciudad</th>
-                                <th scope="col">Celular</th>
-                                <th scope="col">Correo electrónico</th>
-                                <th scope="col">Material</th>
-                                <th scope="col">Acción</th>                           
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <?php
-                            include '../controladores/ProveedorControlador.php';
-                            ?>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <?php include '../modales/modal_proveedor.php'; ?>
-
-            <script src="../js/bootstrap.min.js"></script>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="footer">
-                    <p>Casa rústica</p>
-                    <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                    <p>Celular: 3123115150</p>
-                    <p>Copyright 2023 por Valentina</p>
+                    <div class="footer">
+                        <p>Casa rústica</p>
+                        <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
+                        <p>Celular: 3123115150</p>
+                        <p>Copyright 2023 por Valentina</p>
+                    </div>
                 </div>
             </div>
         </div>

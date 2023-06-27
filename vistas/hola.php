@@ -19,7 +19,6 @@
             <div class="navbar-header">
                 <div class="col-md-5 ">
                     <div>
-                        <a class="navbar-option" href="homepage.php">Inicio</a>
                         <a class="navbar-option" href="vista_home_contable.php">Módulo contable</a>
                         <a class="navbar-option" href="vista_home_stock.php">Módulo de stock</a>
                         <a class="navbar-option" href="vista_home_proveedores.php">Agenda de proveedores</a>
@@ -67,7 +66,7 @@
                             <path
                                 d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
                         </svg>
-                        Agregar detalle factura
+                        Agregar producto
                     </button>
                 </div>
             </div>
@@ -104,23 +103,15 @@
                         <input type="text" class="form-control" name="total_factura" id="total_factura"
                             placeholder="Valor total factura" require>
                     </div>
-                    <div class="form-group mt-3">
+                    <div class="form-group">
                         <div class="col-md-12 btn-add-go">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn  btn-add" name="agregar_factura">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-check-square" viewBox="0 0 16 16">
-                                    <path
-                                        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                                    <path
-                                        d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
-                                </svg>
-                                Agregar factura </button>
+                            <button type="submit" class="btn  btn-add" name="agregar_factura">Agregar
+                                factura</button>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-striped">
@@ -143,25 +134,54 @@
                     </table>
                 </div>
             </div>
+            <?php //include '../modales/modal_detalle_factura.php';?>
 
-            <?php include '../modales/modal_detalle_factura.php';?>
+            <!-- Modal detalle Factura -->
+            <div class="modal fade" id="modal_detalle_factura" role="dialog" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal_detalle_factura">Agregar producto a la factura</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="agregarProductoFacturaForm" method="POST"
+                                action="../controladores/Detalle_FacturaControlador.php" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="nombre_producto">Nombre del producto</label>
+                                    <input type="text" class="form-control" name="nombre_producto" id="nombre_producto"
+                                        placeholder="" require>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cantidad_producto">Cantidad</label>
+                                    <input type="number" class="form-control" name="cantidad_producto"
+                                        id="cantidad_producto" placeholder="" require>
+                                </div>
+                                <div class="form-group">
+                                    <label for="valor_unit_producto">Precio unitario</label>
+                                    <input type="number" class="form-control" name="precio_producto"
+                                        id="precio_producto" placeholder="" require>
+                                </div>
+                                <div class="form-group">
+                                    <label for="total_detalle_factura">Total detalle factura</label>
+                                    <input type="number" class="form-control" name="total_detalle_factura"
+                                        id="total_detalle_factura" placeholder="" require>
+                                </div>
 
-            <script src="../js/bootstrap.min.js"></script>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="footer">
-                        <p>Casa rústica</p>
-                        <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                        <p>Celular: 3123115150</p>
-                        <p>Copyright 2023 por Valentina</p>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn  btn-add" name="agregar_producto">Agregar
+                                        detalle factura</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
 
-
-
-
-        </div>
+            <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

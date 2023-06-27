@@ -11,6 +11,7 @@ include '../entidades/Producto.php';
 
 class ProductoDao extends Conexion
 {
+
     protected static $conexion;
     //El sgte metodo nos permite conectarnos en todo momento, que nos va a descender la conexion, aqui lo que hacemos es decirle a propiedad conexion generada previamente que se llene de la conexion 
     private static function getConexion()
@@ -66,5 +67,29 @@ class ProductoDao extends Conexion
         return $resultado;
     
     }
+
+
+
+/*Para el modal de agregar producto a factura */
+
+public static function listarProductosFactura()
+{
+    self::getConexion();
+
+    $query = self::$conexion->prepare("SELECT id_producto, nombre, num_unidades, descripcion, num_unidades, valor_unidad FROM productos");
+    $query->execute();
+
+    $data = $query->fetchAll();
+
+    $options = '';
+    foreach ($data as $valores) {
+        $options .= '<option value="' . $valores['id_producto'] . '">' . $valores["nombre"] . ' - Unidades: ' . $valores["num_unidades"] . ' - Valor: ' . $valores["valor_unidad"] . '</option>';
+    }
+
+    echo '<select>' . $options . '</select>';
 }
+}
+
+
+
 ?>

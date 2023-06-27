@@ -52,6 +52,15 @@
                     }
                     ?>
 
+                    <div
+                        style="color: red; font-size: 18px; font-weight: normal; text-align: center; border: spx solid #734e3837; background-color: #F2D5DB; border-radius: 3px; margin: 3px">
+                        <?php echo $resultado; ?>
+                    </div>
+
+
+
+
+
 
 
                     <div class="col-md-12 form-login">
@@ -72,7 +81,8 @@
                             </div>
 
                             <div class="btn-login">
-                                <button type="submit" class="btn btn-add" name="btningresar" value="btningresar">Ingresar</button>
+                                <button type="submit" class="btn btn-add" name="btningresar"
+                                    value="btningresar">Ingresar</button>
                             </div>
                         </form>
                     </div>

@@ -10,16 +10,17 @@
                 </div>
                 <div class="modal-body">
                     <!-- codigo del formulario para agregar un proveedor -->
-                    <form id="agregarProveedorForm" method="POST" action="../controladores/ProveedorControlador.php"
-                        enctype="multipart/form-data">
+                    <form id="agregarProveedorForm" method="POST" action="../controladores/ProveedorControlador.php">
+
 
                         <div class="form-group align-left-m10 ">
-                            <label  for="nombre">Nombre</label>
+                            <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" require>
                         </div>
                         <div class="form-group align-left-m10">
                             <label for="apellido">Apellido</label>
-                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="" require>
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder=""
+                                require>
                         </div>
                         <div class="form-group align-left-m10">
                             <label for="nit">NIT</label>
@@ -39,11 +40,13 @@
                         </div>
                         <div class="form-group align-left-m10">
                             <label for="material">Material</label>
-                            <input type="text" class="form-control" name="material" id="material" placeholder="" require>
+                            <input type="text" class="form-control" name="material" id="material" placeholder=""
+                                require>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn  btn-add" name="agregar_producto">Agregar</button>
+                            <button type="submit" class="btn  btn-add" name="agregar_proveedor">Agregar
+                                proveedor</button>
                         </div>
                     </form>
                 </div>

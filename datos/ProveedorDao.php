@@ -13,7 +13,7 @@ class ProveedorDao extends Conexion
         self::$conexion = Conexion::conectar(); 
     }
       
-    //método que sirve para insertar un Egreso  
+    //método que sirve para insertar un Proveedor  
 
    public static function insertarProveedor($proveedor)
    {
