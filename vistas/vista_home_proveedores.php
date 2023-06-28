@@ -83,7 +83,7 @@
                                 <th scope="col">Celular</th>
                                 <th scope="col">Correo electrónico</th>
                                 <th scope="col">Material</th>
-                                <th scope="col">Acción</th>                           
+                                <th scope="col" colspan="2">Acción</th>                           
                             </tr>
                         </thead>
 

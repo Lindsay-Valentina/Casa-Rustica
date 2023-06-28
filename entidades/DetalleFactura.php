@@ -1,6 +1,6 @@
 <?php
 
-class detalleFactura
+class DetalleFactura
 {
     private $id_detalle_factura;
     private $id_producto;
@@ -74,7 +74,9 @@ class detalleFactura
 	public function setFecha_registro($fecha_registro){
 		$this->fecha_registro = $fecha_registro;
 	}
-    
+
+	public function __construct() {
+	}
 }
 
 ?>

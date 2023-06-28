@@ -1,66 +1,52 @@
 <?php
+include_once('../datos/DetalleFacturaDao.php');
+include_once('../datos/ProductoDao.php');
 
-include '../datos/DetalleFacturaDao.php';
-
+$detalles =  array();
 // Verificar si se ha enviado una solicitud POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $id_producto = $_POST['producto'];
+  $producto = ProductoDao::getProductoId($id_producto)->fetch(PDO::FETCH_OBJ);
+  //print_r($producto);
 
+  $cantidad = $_POST['cantidad'];
+  $detalle = new DetalleFactura();
+  $detalle->setId_producto($producto->id_producto);
+  $detalle->setNombre_producto($producto->nombre);
+  $detalle->setCantidad_producto($cantidad);
+  $detalle->setValor_unit_producto($producto->valor_unidad);
+  print_r($detalles);
   
-  // Obtener los datos del formulario detalle factura(agregar producto a factura)
-  $id_detalle_factura = isset($_POST['id_detalle_factura']) ? $_POST['id_detalle_factura'] : '';
-    $id_producto = isset($_POST['id_producto']) ? $_POST['id_producto'] : '';
-    $id_factura = isset($_POST['id_factura']) ? $_POST['id_factura'] : '';
-    $nombre_producto = isset($_POST['nombre_producto']) ? $_POST['nombre_producto'] : '';
-    $cantidad_producto = isset($_POST['cantidad_producto']) ? $_POST['cantidad_producto'] : '';
-    $valor_unit_producto = isset($_POST['valor_unit_producto']) ? $_POST['valor_unit_producto'] : '';
-    $total_detalle_factura = isset($_POST['total_detalle_factura']) ? $_POST['total_detalle_factura'] : '';
-    $fecha_registro = isset($_POST['fecha_registro']) ? $_POST['fecha_registro'] : '';
-
-  
-  // Crear una instancia de detalle_factura y establecer los valores
-  $detalleFactura = new detalleFactura();
-  $detalleFactura->setId_detalle_factura($id_detalle_factura);
-  $detalleFactura->setId_producto($id_producto);
-  $detalleFactura->setId_factura($id_factura);
-  $detalleFactura->setNombre_producto($nombre_producto);
-  $detalleFactura->setCantidad_producto($cantidad_producto);
-  $detalleFactura->setValor_unit_producto($valor_unit_producto);
-  $detalleFactura->setTotal_detalle_factura($total_detalle_factura);
-  $detalleFactura->setFecha_registro($fecha_registro);
-
-
-  // Insertar el detalleFactura en la base de datos
-  if (DetalleFacturaDao::insertarDetalleFactura($detalleFactura)) {
-    // el detalle factura se ha insertado correctamente
-    echo "Detalle factura agregado exitosamente.";
-    header("Location: ../vistas/vista_agregar_factura.php"); // Redireccionar a la vista de agregar factura
-
-  } else {
-    // Ocurrió un error al insertar el el detalle factura
-    echo "Error al agregar detalle factura";
-  }
+  array_push($detalles, $detalle);
+  print_r($detalles);
 
 }
 
-// Obtener la lista de detalle factura
-$detalleFacturas = DetalleFacturaDao::listarDetalleFacturas();
+//print_r($detalleFacturas);
+if($detalles != null){
+  foreach ($detalles as $detalle):
+    echo "<tr>";
+    echo "<td>" . $detalle->getNombre_producto() . "</td>";
+    echo "<td>" . $detalle->getCantidad_producto() . "</td>";
+    echo "<td>" . $detalle->getValor_unit_producto() . "</td>";
+    echo "<td>" . $detalle->getCantidad_producto() * $detalle->getValor_unit_producto() . "</td>";
+    echo "</tr>";
+  endforeach;
+}
+
 
 // Recorrer los detallefactura y mostrarlos en filas de la tabla
-
-while ($detalleFactura = $detalleFacturas->fetch(PDO::FETCH_ASSOC)) {
+/**
+while ($detalleFactura = $detalleFacturas) {
     echo "<tr>";
-    echo "<td>" . $detalleFactura['id_detalle_factura'] . "</td>";
-    echo "<td>" . $detalleFactura['id_producto'] . "</td>";
-    echo "<td>" . $detalleFactura['id_factura'] . "</td>";
     echo "<td>" . $detalleFactura['nombre_producto'] . "</td>";
     echo "<td>" . $detalleFactura['cantidad_producto'] . "</td>";
     echo "<td>" . $detalleFactura['valor_unit_producto'] . "</td>";
-    echo "<td>" . $detalleFactura['total_detalle_factura'] . "</td>";    
-    echo "<td>" . $detalleFactura['fecha_registro'] . "</td>";    
+    echo "<td>" . $detalleFactura['cantidad_producto'] * $detalleFactura['valor_unit_producto']. "</td>";    
     echo "</tr>";
-
-    
 }
+ */
+
 
 
 ?>

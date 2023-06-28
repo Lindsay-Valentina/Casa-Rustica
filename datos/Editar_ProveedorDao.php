@@ -3,7 +3,7 @@
 include '../conexion.php';
 include '../entidades/Proveedor.php';
 
-<?php
+
 
 class Editar_ProveedorDao
 {

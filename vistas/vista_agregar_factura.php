@@ -20,9 +20,9 @@
                 <div class="col-md-5 ">
                     <div>
                         <a class="navbar-option" href="homepage.php">Inicio</a>
-                        <a class="navbar-option" href="vista_home_contable.php">Módulo contable</a>
-                        <a class="navbar-option" href="vista_home_stock.php">Módulo de stock</a>
-                        <a class="navbar-option" href="vista_home_proveedores.php">Agenda de proveedores</a>
+                        <a class="navbar-option" href="vista_home_contable.php">Contabilidad</a>
+                        <a class="navbar-option" href="vista_home_stock.php">Stock</a>
+                        <a class="navbar-option" href="vista_home_proveedores.php">Proveedores</a>
                     </div>
 
                 </div>
@@ -67,7 +67,7 @@
                             <path
                                 d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
                         </svg>
-                        Agregar detalle factura
+                        Agregar producto a la factura
                     </button>
                 </div>
             </div>
@@ -75,35 +75,79 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="nombre_cliente">Cliente</label>
-                        <input type="text" class="form-control" name="nombre_cliente" id="nombre_cliente" placeholder=""
-                            require>
+                        <label for="cliente">Cliente</label>
+                        <select class="form-select" name="cliente">
+                            <option selected>Selecccione una opción</option>
+                            <?php
+                            include '../controladores/ClienteControlador.php';
+                            ?>
+                        </select>
                     </div>
+                </div>
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="metodo_pago">Método de pago</label>
-                        <input type="text" class="form-control" name="metodo_pago" id="metodo_pago" placeholder=""
-                            require>
+                        <select class="form-select" name="metodo_pago">
+                            <option selected>Selecccione una opción</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta Débito">Tarjeta Débito</option>
+                            <option value="Transferencia">Transferencia</option>
+                            <option value="Tarjeta crédito">Tarjeta crédito</option>
+                        </select>
                     </div>
+
+
+                </div>
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="estado_pago">Estado de pago</label>
-                        <input type="text" class="form-control" name="estado_pago" id="estado_pago" placeholder=""
-                            require>
+                        <select class="form-select" name="estado_pago">
+                            <option selected>Selecccione una opción</option>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="Aprobado">Aprobado</option>
+                            <option value="Rechazado">Rechazado</option>
+                        </select>
                     </div>
+
+                </div>
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="fecha_venta">Fecha de venta</label>
-                        <input type="fecha" class="form-control" name="fecha_venta" id="fecha_venta"
+                        <input type="date" class="form-control" name="fecha_venta" id="fecha_venta"
                             placeholder="Fecha en la que se causó la venta" require>
                     </div>
-                    <div class="form-group">
-                        <label for="producto">Producto</label>
-                        <input type="text" class="form-control" name="producto" id=""
-                            placeholder="Productos relacionados en la factura" require>
-                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px; margin-bottom:20px;">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead class="thead-brown">
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Valor Unitario</th>
+                                <th scope="col">Total Producto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            include '../controladores/Detalle_FacturaControlador.php';
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="total_factura">Total</label>
                         <input type="text" class="form-control" name="total_factura" id="total_factura"
                             placeholder="Valor total factura" require>
                     </div>
+                </div>
+                <div class="col-md-12 align-center">
                     <div class="form-group mt-3">
                         <div class="col-md-12 btn-add-go">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -121,47 +165,24 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <table class="table table-striped">
-                        <thead class="thead-brown">
-                            <tr>
-                                <th scope="col">id_producto</th>
-                                <th scope="col">id_factura </th>
-                                <th scope="col">Producto</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Valor_unit_producto</th>
-                                <th scope="col">Total detalle_factura</th>
-                                <th scope="col">Fecha registro</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            include '../controladores/Detalle_FacturaControlador.php';
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
 
-            <?php include '../modales/modal_detalle_factura.php';?>
+        
 
             <script src="../js/bootstrap.min.js"></script>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="footer">
-                        <p>Casa rústica</p>
-                        <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                        <p>Celular: 3123115150</p>
-                        <p>Copyright 2023 por Valentina</p>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer">
+                    <p>Casa rústica</p>
+                    <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
+                    <p>Celular: 3123115150</p>
+                    <p>Copyright 2023 por Valentina</p>
                 </div>
             </div>
-
-
-
-
         </div>
+    </div>
+
+    <?php include '../modales/modal_detalle_factura.php';?>
 </body>
 
 </html>

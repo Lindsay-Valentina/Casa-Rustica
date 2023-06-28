@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group align-left-m10">
                         <label for="link_imagen">Imagen</label>
-                        <input type="file" class="form-control" name="link_imagen" id="link_imagen" placeholder="">
+                        <input type="file" class="form-control" name="link_imagen" value="" accept="image/png, image/jpeg">
                     </div>
                     
                     <div class="modal-footer">

@@ -13,21 +13,20 @@
             <div class="modal-body">
                 <!-- codigo del formulario para agregar un producto a la factura -->
                 <form id="agregarProductoFacturaForm" method="POST"
-                    action="../controladores/Detalle_FacturaControlador.php" enctype="multipart/form-data">
-
+                    action="" enctype="multipart/form-data">
                     <div class="form-group align-left-m10 ">
                         <label for="producto">Producto</label>
-                        <?php include '../datos/ProductoDao.php'; ?>
-                    </div>
-                    <div class="form-group align-left-m10 ">
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="0">lista de productos en stock:</option>
-                            <?php ProductoDao::listarProductosFactura(); ?>
+                        <select class="form-select" name="producto" aria-label="Default select example" required>
+                        <option selected>Selecccione una opción</option>
+                            <?php include '../controladores/ControladorForms.php';
+                                $form = new ControladorForms();
+                                $form->getProductosFactura();
+                            ?>
                         </select>
                     </div>
                     <div class="form-group align-left-m10 ">
                         <label for="email">Cantidad</label>
-                        <input type="text" class="form-control" name="concepto" id="concepto" placeholder="" require>
+                        <input type="number" class="form-control" name="cantidad"placeholder="0" required>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

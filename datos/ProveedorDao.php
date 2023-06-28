@@ -49,7 +49,7 @@ class ProveedorDao extends Conexion
 
     public static function listarProveedores()
     {
-        $query = "SELECT nombre, apellido, nit, ciudad, celular, email, material FROM proveedores";
+        $query = "SELECT id_proveedor, nombre, apellido, nit, ciudad, celular, email, material FROM proveedores";
         self::getConexion();
     
         $resultado = self::$conexion->query($query);

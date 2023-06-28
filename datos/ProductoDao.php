@@ -5,7 +5,7 @@ public static function es un método que nos permite conectarnos en todo momento
 self:: para invocar la clase conexion, en  la linea 15 decimos que la propiedad $conexion que hemos generado con protect static se llene de la conexion. La linea 20 y 21 es para decirle que se cierre esa conexion con PDO */
 
 
-include '../conexion.php';
+include_once ('../conexion.php') ;
 include '../entidades/Producto.php';
 
 
@@ -16,14 +16,14 @@ class ProductoDao extends Conexion
     //El sgte metodo nos permite conectarnos en todo momento, que nos va a descender la conexion, aqui lo que hacemos es decirle a propiedad conexion generada previamente que se llene de la conexion 
     private static function getConexion()
     {
-        self::$conexion = Conexion::conectar(); 
+        self::$conexion = Conexion::conectar();
     }
-      
+
     /*método que sirve para insertar un Producto  */
 
-   public static function insertarProducto($producto)
-   {
-    $query = "INSERT INTO productos (nombre, referencia, descripcion, num_unidades, valor_unidad, valor_total_productos, link_imagen, fecha_registro, fecha_actualizacion)
+    public static function insertarProducto($producto)
+    {
+        $query = "INSERT INTO productos (nombre, referencia, descripcion, num_unidades, valor_unidad, valor_total_productos, link_imagen, fecha_registro, fecha_actualizacion)
                   VALUES (:nombre, :referencia, :descripcion, :num_unidades, :valor_unidad, :valor_total_productos, :link_imagen, :fecha_registro, :fecha_actualizacion)";
 
         self::getConexion();
@@ -61,33 +61,37 @@ class ProductoDao extends Conexion
     {
         $query = "SELECT nombre, referencia, descripcion, num_unidades, valor_unidad, valor_total_productos, link_imagen, fecha_registro FROM productos";
         self::getConexion();
-    
+
         $resultado = self::$conexion->query($query);
-        
+
         return $resultado;
+
+    }
+
+
+
+    /*Para el modal de agregar producto a factura */
+
+    public static function listarProductosFactura()
+    {
+        self::getConexion();
+
+        $query = self::$conexion->prepare("SELECT id_producto, nombre,num_unidades, valor_unidad FROM productos");
+        $query->execute();
+
+        return $query;
+    }
+
     
+    public static function getProductoId($id)
+    {
+        self::getConexion();
+
+        $query = self::$conexion->prepare("SELECT id_producto, nombre, num_unidades, valor_unidad FROM productos WHERE id_producto = '$id'");
+        $query->execute();
+
+        return $query;
     }
-
-
-
-/*Para el modal de agregar producto a factura */
-
-public static function listarProductosFactura()
-{
-    self::getConexion();
-
-    $query = self::$conexion->prepare("SELECT id_producto, nombre, num_unidades, descripcion, num_unidades, valor_unidad FROM productos");
-    $query->execute();
-
-    $data = $query->fetchAll();
-
-    $options = '';
-    foreach ($data as $valores) {
-        $options .= '<option value="' . $valores['id_producto'] . '">' . $valores["nombre"] . ' - Unidades: ' . $valores["num_unidades"] . ' - Valor: ' . $valores["valor_unidad"] . '</option>';
-    }
-
-    echo '<select>' . $options . '</select>';
-}
 }
 
 

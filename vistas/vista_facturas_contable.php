@@ -21,8 +21,8 @@
                     <div>
                         <a class="navbar-option" href="homepage.php">Inicio</a>
                         <a class="navbar-option" href="vista_home_contable.php">Módulo contable</a>
-                        <a class="navbar-option" href="vista_home_stock.php">Módulo de stock</a>
-                        <a class="navbar-option" href="vista_home_proveedores.php">Agenda de proveedores</a>
+                        <a class="navbar-option" href="vista_home_stock.php">Stock</a>
+                        <a class="navbar-option" href="vista_home_proveedores.php">Proveedores</a>
                     </div>
 
                 </div>
