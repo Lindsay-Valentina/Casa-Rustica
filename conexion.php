@@ -7,7 +7,7 @@ public static function conectar()
 {
     try {
 
-        $conexion = new PDO("mysql:host=localhost;dbname=app_casa_rustica", "root", ""); 
+        $conexion = new PDO("mysql:host=localhost;dbname=app_casa_rustica", "root", "1234"); 
         return $conexion; 
     }
 
