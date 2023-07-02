@@ -1,3 +1,6 @@
+<?php
+include '../datos/ProveedorDao.php';
+  ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,8 +15,12 @@
 
 <body>
     <?php
-    session_start();
-    ?>
+     session_start();
+     if (isset($proveedor)) {
+        $id_proveedor = $proveedor['id_proveedor'];
+     }
+     ?>
+
     <div class="container-fluid">
         <div class="row">
             <div class="navbar-header">
@@ -54,49 +61,48 @@
                 </div>
             </div>
 
+
             <div class="row">
                 <div class="col-md-6">
-                    <form method="POST" action="editar_proveedor.php?id=<?php echo $idProveedor; ?>">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-labe mb-1">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    <form action="../controladores/ProveedorControlador.php" method="POST">
+                        <input type="hidden" name="id_proveedor" value="<?php echo $proveedor['id_proveedor']; ?>">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" name="nombre"
+                                value="<?php echo $proveedor['nombre']; ?>" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="apellido" class="form-label mb-1">Apellido:</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido" required>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" name="apellido"
+                                value="<?php echo $proveedor['apellido']; ?>" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="nit" class="form-label mb-1">NIT:</label>
-                            <input type="text" class="form-control" id="nit" name="nit" required>
+                        <div class="form-group">
+                            <label for="nit">NIT:</label>
+                            <input type="text" class="form-control" name="nit" value="<?php echo $proveedor['nit']; ?>"
+                                required>
                         </div>
-                        <div class="mb-3">
-                            <label for="ciudad" class="form-label mb-1">Ciudad:</label>
-                            <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad:</label>
+                            <input type="text" class="form-control" name="ciudad"
+                                value="<?php echo $proveedor['ciudad']; ?>" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="celular" class="form-label mb-1">Celular:</label>
-                            <input type="text" class="form-control" id="celular" name="celular" required>
+                        <div class="form-group">
+                            <label for="celular">Celular:</label>
+                            <input type="text" class="form-control" name="celular"
+                                value="<?php echo $proveedor['celular']; ?>" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label mb-1">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="material" class="form-label mb-1">Material:</label>
-                            <input type="text" class="form-control" id="material" name="material" required>
-                        </div>
-                        <button type="submit" class="btn  btn-add mb-3" name="actualizar_proveedor">Actualizar
-                                proveedor</button>
+                        <button type="submit" class="btn btn-add mb-3 mt-3">Guardar</button>
                     </form>
                 </div>
+                <script src="../js/bootstrap.bundle.min.js"></script>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer">
-                        <p>Casa rústica</p>
-                        <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                        <p>Celular: 3123115150</p>
-                        <p>Copyright 2023 por Valentina</p>
+                        <p style="margin-bottom: 0.4em;">CASA RÚSTICA</p>
+                        <p style="margin-bottom: 0.4em;">Dirección: Cra 2B este, Tunja, Boyacá</p>
+                        <p style="margin-bottom: 0.4em;">Celular: 3123115150</p>
+                        <p style="margin-bottom: 0;">Copyright 2023 por Valentina Guaba.</p>
                     </div>
                 </div>
             </div>

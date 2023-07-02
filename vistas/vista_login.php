@@ -19,8 +19,7 @@
                 <div class="col-md-8 ">
                     <div>
                         <a class="navbar-option" href="index.php">Inicio</a>
-                        <a class="navbar-option" href="acerca.php">Acerca de nosotros</a>
-                        <a class="navbar-option" href="catalogo.php">Catálogo</a>
+                        <a class="navbar-option" href="nosotros.php">Acerca de nosotros</a>
                     </div>
 
                 </div>
@@ -93,11 +92,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="footer">
-                    <p>Casa rústica</p>
-                    <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                    <p>Celular: 3123115150</p>
-                    <p>Copyright 2023 por Valentina</p>
-
+                    <p style="margin-bottom: 0.4em;">CASA RÚSTICA</p>
+                    <p style="margin-bottom: 0.4em;">Dirección: Cra 2B este, Tunja, Boyacá</p>
+                    <p style="margin-bottom: 0.4em;">Celular: 3123115150</p>
+                    <p style="margin-bottom: 0;">Copyright 2023 por Valentina Guaba.</p>
                 </div>
             </div>
         </div>

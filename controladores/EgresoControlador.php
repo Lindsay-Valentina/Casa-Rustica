@@ -51,6 +51,7 @@ while ($egreso = $egresos->fetch(PDO::FETCH_ASSOC)) {
     echo "<td>" . $egreso['soporte'] . "</td>";
     echo "<td>" . $egreso['fecha_registro'] . "</td>";
     echo "<td>" . $egreso['fecha_actualizacion'] . "</td>";
+    
     echo "</tr>";
 }
 

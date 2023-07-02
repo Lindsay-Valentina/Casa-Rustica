@@ -173,10 +173,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="footer">
-                    <p>Casa rústica</p>
-                    <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                    <p>Celular: 3123115150</p>
-                    <p>Copyright 2023 por Valentina</p>
+                    <p style="margin-bottom: 0.4em;">CASA RÚSTICA</p>
+                    <p style="margin-bottom: 0.4em;">Dirección: Cra 2B este, Tunja, Boyacá</p>
+                    <p style="margin-bottom: 0.4em;">Celular: 3123115150</p>
+                    <p style="margin-bottom: 0;">Copyright 2023 por Valentina Guaba.</p>
                 </div>
             </div>
         </div>

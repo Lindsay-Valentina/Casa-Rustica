@@ -11,7 +11,7 @@
 
             <div class="modal-body">
                 <!-- Código del formulario para agregar un producto al stock -->
-                <form id="agregarProductoForm" method="POST" action="../controladores/ProductoControlador.php"
+                <form id="agregarProductoForm" method="POST" action=""
                     enctype="multipart/form-data">
 
                     <div class="form-group align-left-m10">

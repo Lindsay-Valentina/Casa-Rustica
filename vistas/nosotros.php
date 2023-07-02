@@ -20,7 +20,6 @@
                 <div class="col-md-5 ">
                     <div>
                         <a class="navbar-option" href="index.php">Inicio</a>
-                        <a class="navbar-option" href="nosotros.php">Acerca de nosotros</a>
                     </div>
 
                 </div>
@@ -47,31 +46,55 @@
             <div class="col-md-12 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
                 <div class="banner">
                     <div class="imagen_banner">
+
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-4 shadow-none p-3 mb-5 bg-body-tertiary rounded">
+            <div class="col-md-4 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
                 <div class="imagen_content">
-                    <img src="../multimedia/jarron_banner.jpg" alt="Descripción de la imagen">
+                    <img src="../multimedia/workplace.jpeg" alt="Descripción de la imagen">
                 </div>
 
             </div>
             <div class="col-md-8 vertical-center mb-5">
                 <div class="descripcion_imagen">
-                    <p class="fw-medium">En Casa Rústica nos especializamos en la creación de hermosos muebles en
-                        madera,diseñados y construidos con pasión y atención al detalle. Cada pieza que creamos es
-                        única y está hecha a mano, utilizando maderas de alta calidad y técnicas tradicionales
-                        de carpintería.</p>
-                        <p> Nuestro equipo de expertos artesanos posee una profunda conexión con la madera, apreciando su  grano,  textura y singularidad. Utilizamos únicamente maderas provenientes de fuentes sostenibles y
-                        trabajamos con técnicas tradicionales para preservar la autenticidad y el encanto de cada pieza
-                        que
-                        creamos.</p>
+                    <p class="fw-medium">En Casa Rústica, nos apasiona crear muebles únicos y artesanales en madera para brindar calidez y estilo a tus espacios. Somos un emprendimiento dedicado a fusionar la belleza de la naturaleza con la funcionalidad del diseño, ofreciendo piezas excepcionales que realzan la
+                        estética de cualquier ambiente.</p>
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-4 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                <div class="imagen_content">
+                    <img src="../multimedia/diseno-interiores-muebles-madera.jpg" alt="Descripción de la imagen">
+                </div>
+
+            </div>
+            <div class="col-md-8 vertical-center mb-5">
+                <div class="descripcion_imagen">
+                    <p class="fw-medium">En Casa Rústica, comprendemos que cada cliente tiene sus propias necesidades y gustos. Por ello, nos enfocamos en un enfoque personalizado, colaborando estrechamente contigo para captar tu visión y transformarla en una realidad tangible. Ya sea que busques una mesa de comedor rústica y robusta, una cómoda elegante para tu dormitorio o un armario encantador para tu sala de estar, estamos comprometidos en ofrecerte soluciones a medida que se adapten perfectamente a tu estilo de vida.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                <div class="imagen_content">
+                    <img src="../multimedia/tocador.jpeg" alt="Descripción de la imagen">
+                </div>
+
+            </div>
+            <div class="col-md-8 vertical-center mb-5">
+                <div class="descripcion_imagen">
+                    <p class="fw-medium">En Casa Rústica, comprendemos que cada cliente tiene sus propias necesidades y gustos. Por ello, nos enfocamos en un enfoque personalizado, colaborando estrechamente contigo para captar tu visión y transformarla en una realidad tangible. Ya sea que busques una mesa de comedor rústica y robusta, una cómoda elegante para tu dormitorio o un armario encantador para tu sala de estar, estamos comprometidos en ofrecerte soluciones a medida que se adapten perfectamente a tu estilo de vida.</p>
+                </div>
+            </div>
+        </div>
+
 
         <div class="row">
             <div class="col-md-12">

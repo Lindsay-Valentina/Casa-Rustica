@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Mueve el archivo cargado a la ubicación deseada
 if (move_uploaded_file($tempname, $directorio_destino)) {
 
-     echo 'El archivo se ha movido correctamente';
+     
 
   // Crear una instancia de Producto y establecer los valores
   $producto = new Producto();
@@ -36,7 +36,6 @@ if (move_uploaded_file($tempname, $directorio_destino)) {
   // Insertar el producto en la base de datos
   if (ProductoDao::insertarProducto($producto)) {
     // El producto se ha insertado correctamente
-    echo "Producto agregado exitosamente.";
   } else {
     // Ocurrió un error al insertar el producto
     echo "Error al agregar el producto.";

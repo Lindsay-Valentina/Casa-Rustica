@@ -62,56 +62,59 @@
             </div>
         </div>
 
+       
         <div class="row">
-        <div class="col-md-4">
-                <div class="module">
+            <div class="col-md-4 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                <div class="module pt-3">
                     <div style="height:120px;">
                         <img style="height:100%" src="../multimedia/contable.png" alt="">
                     </div>
-                    <div>
-                        <h3>Módulo contable</h3>
-                        <a href="vista_home_contable.php">Ir al módulo contable</a>
+                    <div class="mt-3 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                        <a href="vista_home_contable.php" class="text-decoration-none text-dark">
+                            <h3>Módulo contable</h3>
+                        </a>
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-md-4">
-                <div class="module">
-                    <div style="height:120px;">
+            <div class="col-md-4 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                <div class="module pt-3">
+                    <div style="height:130px">
                         <img style="height:100%" src="../multimedia/muebles.png" alt="">
                     </div>
-                    <div>
-                        <h3>Módulo de stock</h3>
-                        <a href="vista_home_stock.php">Ir al módulo de stock</a>
+                    <div class="mt-3 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                        <a href="vista_home_stock.php" class="text-decoration-none text-dark">
+                            <h3>Módulo de stock</h3>
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-4">
-                <div class="module">
+
+            <div class="col-md-4 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                <div class="module pt-3">
                     <div style="height:120px;">
                         <img style="height:100%" src="../multimedia/cuaderno.png" alt="">
                     </div>
-                    <div>
-                        <h3>Agenda de proveedores</h3>
-                        <a href="vista_home_proveedores.php">Ir a proveedores</a>
+                    <div class="mt-3 shadow-sm p-3 mb-1 bg-body-tertiary rounded">
+                        <a href="vista_home_proveedores.php" class="text-decoration-none text-dark">
+                            <h3>Agenda de proveedores</h3>
+                        </a>
                     </div>
                 </div>
             </div>
-        <div class="row">
+            <div class="row">
             <div class="col-md-12">
                 <div class="footer">
-                    <p>Casa rústica</p>
-                    <p>Dirección: Cra 2B este, Tunja, Boyacá</p>
-                    <p>Celular: 3123115150</p>
-                    <p>Copyright 2023 por Valentina</p>
-
+                    <p style="margin-bottom: 0.4em;">CASA RÚSTICA</p>
+                    <p style="margin-bottom: 0.4em;">Dirección: Cra 2B este, Tunja, Boyacá</p>
+                    <p style="margin-bottom: 0.4em;">Celular: 3123115150</p>
+                    <p style="margin-bottom: 0;">Copyright 2023 por Valentina Guaba.</p>
                 </div>
             </div>
         </div>
 
-    </div>
+        </div>
 
 
 </body>
